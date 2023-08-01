@@ -3,7 +3,7 @@ import DateHandler
 
 def HandleChoice1():
     print("Enter A Date(DD-MM-YYYY):")
-    date = input()
+    date = input("Choice: ")
     if(DateHandler.ValidateDate(date)):
         Formatted_Date = DateHandler.FormatDate(date)
         find=False
@@ -23,7 +23,7 @@ def HandleChoice1():
 
 def HandleChoice2():
     print("Enter A Date(DD-MM-YYYY):")
-    date = input()
+    date = input("Choice: ")
     if(DateHandler.ValidateDate(date)):
         Formatted_Date = DateHandler.FormatDate(date)
         find=False
@@ -42,7 +42,7 @@ def HandleChoice2():
 
 def HandleChoice3():
     print("Enter A Date(DD-MM-YYYY):")
-    date = input()
+    date = input("Choice: ")
     if(DateHandler.ValidateDate(date)):
         Formatted_Date = DateHandler.FormatDate(date)
         find=False
