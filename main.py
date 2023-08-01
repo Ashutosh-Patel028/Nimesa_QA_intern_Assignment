@@ -59,7 +59,7 @@ def HandleChoice3():
     else:
         print("\n-------⚠ Error: Enter a Valid Date(DD-MM-YYYY)!!--------\n")
 
-if __name__==__main__:
+if __name__=='__main__':
     URL = "https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22"
     res = requests.get(URL)
     es = requests.get(URL)
