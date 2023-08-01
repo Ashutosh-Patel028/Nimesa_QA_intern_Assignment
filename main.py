@@ -1,10 +1,11 @@
-import requests;
+import requests
+import DateHandler
 
 def HandleChoice1():
     print("Enter A Date(DD-MM-YYYY):")
     date = input()
-    if(ValidateDate(date)):
-        Formatted_Date = FormatDate(date)
+    if(DateHandler.ValidateDate(date)):
+        Formatted_Date = DateHandler.FormatDate(date)
         find=False
         temperature=0
         for item in Weather_Data:
@@ -23,8 +24,8 @@ def HandleChoice1():
 def HandleChoice2():
     print("Enter A Date(DD-MM-YYYY):")
     date = input()
-    if(ValidateDate(date)):
-        Formatted_Date = FormatDate(date)
+    if(DateHandler.ValidateDate(date)):
+        Formatted_Date = DateHandler.FormatDate(date)
         find=False
         wind_speed=0
         for item in Weather_Data:
@@ -42,8 +43,8 @@ def HandleChoice2():
 def HandleChoice3():
     print("Enter A Date(DD-MM-YYYY):")
     date = input()
-    if(ValidateDate(date)):
-        Formatted_Date = FormatDate(date)
+    if(DateHandler.ValidateDate(date)):
+        Formatted_Date = DateHandler.FormatDate(date)
         find=False
         pressure=0
         for item in Weather_Data:
