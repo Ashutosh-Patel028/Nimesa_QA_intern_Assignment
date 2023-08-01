@@ -3,7 +3,7 @@ import DateHandler
 
 def HandleChoice1():
     print("Enter A Date(DD-MM-YYYY):")
-    date = input("Choice: ")
+    date = input()
     if(DateHandler.ValidateDate(date)):
         Formatted_Date = DateHandler.FormatDate(date)
         find=False
@@ -23,7 +23,7 @@ def HandleChoice1():
 
 def HandleChoice2():
     print("Enter A Date(DD-MM-YYYY):")
-    date = input("Choice: ")
+    date = input()
     if(DateHandler.ValidateDate(date)):
         Formatted_Date = DateHandler.FormatDate(date)
         find=False
@@ -42,7 +42,7 @@ def HandleChoice2():
 
 def HandleChoice3():
     print("Enter A Date(DD-MM-YYYY):")
-    date = input("Choice: ")
+    date = input()
     if(DateHandler.ValidateDate(date)):
         Formatted_Date = DateHandler.FormatDate(date)
         find=False
@@ -69,7 +69,7 @@ if __name__=='__main__':
             "\n Hey, Welcome to Weather Station Console! ☁\n Please Select a choice of action: \n 1. Temperature. 🌡\n 2. Wind Speed. 💨 \n 3. Pressure. 🧪\n 0. Terminate Program ❌"
         )
         try:
-            choice = int(input())
+            choice = int(input("Choice: "))
             if choice == 0:
                 print("\n Thank You for Calling weather Station. Hava A Nice Day! 🌻 \n")
                 break
