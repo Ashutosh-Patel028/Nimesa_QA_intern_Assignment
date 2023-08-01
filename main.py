@@ -1,5 +1,63 @@
 import requests;
 
+def HandleChoice1():
+    print("Enter A Date(DD-MM-YYYY):")
+    date = input()
+    if(ValidateDate(date)):
+        Formatted_Date = FormatDate(date)
+        find=False
+        temperature=0
+        for item in Weather_Data:
+            if Formatted_Date in item.get("dt_txt"):
+                temperature=item["main"]["temp"]
+                find=True
+                break
+        if(find):
+            print(f"\n ====> Temperature = {temperature} <====\n")
+        else:
+            print("\n-----No Data Available for this Date!!------\n")
+
+    else:
+        print("\n-------⚠ Error: Enter a Valid Date(DD-MM-YYYY)!!--------\n")
+
+def HandleChoice2():
+    print("Enter A Date(DD-MM-YYYY):")
+    date = input()
+    if(ValidateDate(date)):
+        Formatted_Date = FormatDate(date)
+        find=False
+        wind_speed=0
+        for item in Weather_Data:
+            if Formatted_Date in item.get("dt_txt"):
+                wind_speed=item["wind"]["speed"]
+                find=True
+                break
+        if(find):
+            print(f"\n ====> Wind Speed = {wind_speed} <====\n")
+        else:
+            print("\n-----No Data Available for this Date!!------\n")
+    else:
+        print("\n-------⚠ Error: Enter a Valid Date(DD-MM-YYYY)!!--------\n")
+
+def HandleChoice3():
+    print("Enter A Date(DD-MM-YYYY):")
+    date = input()
+    if(ValidateDate(date)):
+        Formatted_Date = FormatDate(date)
+        find=False
+        pressure=0
+        for item in Weather_Data:
+            if Formatted_Date in item.get("dt_txt"):
+                pressure=item["main"]["pressure"]
+                find=True
+                break
+        if(find):
+            print(f"\n ====> Pressure = {pressure} <====\n")
+        else:
+            print("\n-----No Data Available for this Date!!------\n")
+    else:
+        print("\n-------⚠ Error: Enter a Valid Date(DD-MM-YYYY)!!--------\n")
+
 if __name__==__main__:
     URL = "https://samples.openweathermap.org/data/2.5/forecast/hourly?q=London,us&appid=b6907d289e10d714a6e88b30761fae22"
     res = requests.get(URL)
